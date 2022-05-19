@@ -1,0 +1,127 @@
+:root {
+  --primary:#2C61FF;
+  --secondary: #FFF;
+  --texts: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  filter: blur(0px);
+}
+
+header {
+  color: var(--secondary);
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+#totalSec,
+#globalSec,
+#localSec {
+  background: var(--secondary);
+  width: 90%;
+  height: 20%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.divs {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+#empty {
+  position:absolute;
+  top:10vh;
+  left:50vw;
+  transform:translateX(-50%);
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+#empty div p {
+  margin-left:5px;
+  position:relative;
+  top:7px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size:20px;
+  vertical-align:-1px;
+}
+
+#totalCases div:nth-child(1),
+#totalCases div:nth-child(2),
+#totalDeaths div:nth-child(1),
+#totalDeaths div:nth-child(2),
+#globalNewCases div:nth-child(1),
+#globalNewCases div:nth-child(2),
+#globalNewDeaths div:nth-child(1),
+#globalNewDeaths div:nth-child(2),
+#localNewCases div:nth-child(1),
+#localNewCases div:nth-child(2),
+#localNewDeaths div:nth-child(1),
+#localNewDeaths div:nth-child(2) {
+  width: 50%;
+  text-align: center;
+}
+
+#totalCases,
+#globalNewCases,
+#localNewCases{
+  border-bottom:1px solid rgba(0,0,0,0.2);
+  height:50%;}
+#country{
+  position:absolute;
+  background:var(--secondary);
+  width:100px;
+  height:30px;
+  top:71vh;
+  left:10vw;
+  border-radius:5px;
+}
+@media screen and (min-width: 480px) {
+  header {
+    color: var(--secondary);
+    font-size: 4em;
+    font-weight: 900;
+  }
+
+  h2,
+  h3,
+  p {
+    font-size: 3em;
+  }
+
+  #country {
+    top: 73vh;
+    left:7vw;
+    height:35px;
+    width:120px;
+  }
+}
